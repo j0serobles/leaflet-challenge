@@ -1,6 +1,6 @@
 // Store our API endpoint inside queryUrl
-var boundariesQueryUrl = "http://127.0.0.1:5501/Leaflet-Step-2/data/tectonicplates-master/GeoJSON/PB2002_boundaries.json";
-var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
+var boundariesQueryUrl = "data/tectonicplates-master/GeoJSON/PB2002_boundaries.json";
+var queryUrl = "data/last_week_earthquakes.geojson";
 
 // Get a value between 0 and 1 for marker opacity
 function getOpacity(depth) {

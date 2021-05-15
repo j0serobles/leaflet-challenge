@@ -1,5 +1,6 @@
 // Store our API endpoint inside queryUrl
-var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
+//var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
+var queryUrl = "data/last_week_earthquakes.geojson";
 
     // Get a value between 0 and 1 for marker opacity
     function getOpacity(depth) {
