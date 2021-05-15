@@ -1,38 +1,21 @@
 // Store our API endpoint inside queryUrl
 var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
-// Get a value between 0 and 1 for marker opacity
-function getOpacity(depth) {
- if (depth <= 10) {
-   return(0.05);
- }
- else if (depth <= 20) {
-   return (.20);
- }
- else if(depth <= 30) {
-   return (.30); 
- }
- else if(depth <= 40) {
-  return (.40); 
-}
-else if(depth <= 50) {
-  return (.50); 
-}
-else if(depth <= 60) {
-  return (.60); 
-}
-else if(depth <= 70) {
-  return (.70); 
-}
-else if(depth < 80) {
-  return (.80); 
-}
-else if(depth < 90) {
-  return (.90); 
-}
-else if(depth <= 100) {
-  return (.95); 
-}
+    // Get a value between 0 and 1 for marker opacity
+    function getOpacity(depth) {
+    if (depth <= 70) {
+      return(0.10); // Shallow
+    }
+    else if (depth <= 300) {
+      return (.50); //Intermediate
+    }
+    else if(depth <= 700) {
+      return (.90);  // Deep
+    }
+    else {
+      return (1);  // Very deep!
+    }
+
 }
 // Perform a GET request to the query URL
 d3.json(queryUrl).then(function(data) {
@@ -119,4 +102,24 @@ function createMap(earthquakes) {
   L.control.layers(baseMaps, overlayMaps, {
     collapsed: false
   }).addTo(myMap);
+
+// Set up the legend
+var legend = L.control({ position: "bottomright" });
+legend.onAdd = function() {
+ var div = L.DomUtil.create("div", "info legend"); 
+  // Add min & max
+  var legendInfo  = '<h3 style="text-align:center">Depth (KM)</h3>';
+      legendInfo += '<i style="background: #ff7800; opacity:.1;"></i><span>0-70 (Shallow)</span><br>';
+      legendInfo += '<i style="background: #ff7800; opacity:.5;"></i><span>70-300 (Intermed)</span><br>';
+      legendInfo += '<i style="background: #ff7800; opacity:.9;"></i><span>300-700 (Deep)</span><br>';
+  div.innerHTML   = legendInfo;
+  return div;
+};
+
+  // Adding legend to the map
+  legend.addTo(myMap);
+
 }
+
+
+
