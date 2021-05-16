@@ -10,7 +10,7 @@ In this homework, we have built a new set of tools that will allow the US Geolog
 
 ### Level 1: Basic Visualization
 
-![2-BasicMap](Images/2-BasicMap.png)
+![2-BasicMap](Images/2-BasicMap.GIF)
 
 The first task was to visualize an earthquake data set.
 
@@ -36,7 +36,7 @@ The first task was to visualize an earthquake data set.
 
 ### Level 2: More Data
 
-![5-Advanced](Images/5-Advanced.png)
+![5-Advanced](Images/5-Advanced.GIF)
 
 This second map illustrates the relationship between tectonic plates and seismic activity. A second data set was downloaded and displayed along side the original earthquake set of data. 
 
@@ -58,7 +58,15 @@ Follow these steps to run the software:
 2) ```cd``` to the directory and clone the Github repository with : ```git clone git@github.com:j0serobles/leaflet-challenge.git```
 3) Two subdirectories will be created under the current directory, one for each step in the homework.  Run VS-Code
 from the project top directory (``` /home/<username>/Documents/leaflet-challenge/```) by running ```$ code .```
+
+![InstallAndRun1](Images/install1.PNG)
+
+
 4) From VS-Code, right click the ```Leaflet-Step-1/index.html``` and select "Run From Live Server".  The map 
 will open in a separate browser window.
+
+![InstallAndRun1](Images/install2.PNG)
+
+
 5) Repeat step 4 , this time opening file ```Leaflet-Step-2/index.html```  with Live Server to access the map
    for step 2. 
