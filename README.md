@@ -16,15 +16,11 @@ The first task was to visualize an earthquake data set.
 
 1. **Data Set**
 
-   ![3-Data](Images/3-Data.png)
 
    
    |Data Set               |    Source              |    Data Format        |   Size         |
    |-----------------------|:----------------------:|:---------------------:|---------------:|
    |   USGS GeoJSON Feed   |[Link To Data](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson) | GeoJSON | 1555Kb |
-
-
-   ![4-JSON](Images/4-JSON.png)
 
 2. **Import & Visualize the Data**
 
